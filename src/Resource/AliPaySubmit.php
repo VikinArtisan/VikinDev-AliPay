@@ -57,7 +57,7 @@ class AliPaySubmit
 
         //签名结果与签名方式加入请求提交参数组中
         $paraSort['sign'] = $mySign;
-        $paraSort['sign_type'] = strtoupper(trim(config('VikinDevWebAliPay.sign_type')));
+        $paraSort['sign_type'] = strtoupper(trim(config('VikinDevAliPay.sign_type')));
 
         return $paraSort;
     }
