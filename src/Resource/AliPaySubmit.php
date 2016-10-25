@@ -1,6 +1,5 @@
 <?php
 namespace Vikin\AliPay\Resource;
-header("Content-type: text/html;charset=utf-8");
 
 
 class AliPaySubmit
@@ -94,13 +93,17 @@ class AliPaySubmit
         //待请求参数数组
         $para = $this->buildRequestPara($paraTemp);
 
-        $url = 'https://mapi.alipay.com/gateway.do?_input_charset=' . trim(strtolower(config('VikinDevAliPay.input_charset')));
-
-        while (list ( $key, $val ) = each($para)) {
-            $url .= '&' . $key . '=' . $val;
+        $sHtml = "<form id='alipaysubmit' name='alipaysubmit' action='https://mapi.alipay.com/gateway.do?_input_charset=utf-8' method='get'>";
+        while (list ($key, $val) = each($para)) {
+            $sHtml .= "<input type='hidden' name='" . $key . "' value='" . $val . "'/>";
         }
 
-        return $url;
+        //submit按钮控件请不要含有name属性
+        $sHtml = $sHtml . "<input type='submit'  value='确认' style='display:none;'></form>";
+
+        $sHtml = $sHtml . "<script>document.forms['alipaysubmit'].submit();</script>";
+
+        return $sHtml;
     }
 
     /**

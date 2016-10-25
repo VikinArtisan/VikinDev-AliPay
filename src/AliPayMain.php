@@ -1,6 +1,5 @@
 <?php
 namespace Vikin\AliPay;
-header("Content-type: text/html;charset=utf-8");
 
 use Illuminate\Support\Facades\App;
 
@@ -139,8 +138,6 @@ class AliPayMain
 	 */
 	public function wapRequest ()
 	{
-        header("Content-type: text/html;charset=utf-8");
-
 		$AliPaySubmit = App::make('Vikin\AliPay\Resource\AliPaySubmit');
 
 		$mobileRes = App::call([$AliPaySubmit, 'buildRequest'], ['paraTemp' => $this->parameter_wap()]);
@@ -155,8 +152,6 @@ class AliPayMain
 	 */
 	public function webRequest ()
 	{
-        header("Content-type: text/html;charset=utf-8");
-
 		$AliPaySubmit = App::make('Vikin\AliPay\Resource\AliPaySubmit');
 
 		$mobileRes = App::call([$AliPaySubmit, 'buildRequest'], ['paraTemp' => $this->parameter_pc()]);
