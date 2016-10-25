@@ -90,18 +90,12 @@ class AliPaySubmit
      */
     function buildRequest ( array $paraTemp ) : string
     {
-        //待请求参数数组
         $para = $this->buildRequestPara($paraTemp);
 
-        $sHtml = "<form id='alipaysubmit' name='alipaysubmit' action='https://mapi.alipay.com/gateway.do?_input_charset=utf-8' method='get'>";
-        while (list ($key, $val) = each($para)) {
-            $sHtml .= "<input type='hidden' name='" . $key . "' value='" . $val . "'/>";
+        $sHtml = "https://mapi.alipay.com/gateway.do?_input_charset=utf-8";
+        while (list ( $key, $val ) = each($para)) {
+            $sHtml .= "&" . $key . "=" . $val;
         }
-
-        //submit按钮控件请不要含有name属性
-        $sHtml = $sHtml . "<input type='submit'  value='确认' style='display:none;'></form>";
-
-        $sHtml = $sHtml . "<script>document.forms['alipaysubmit'].submit();</script>";
 
         return $sHtml;
     }

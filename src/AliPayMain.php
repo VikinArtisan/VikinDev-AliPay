@@ -35,7 +35,7 @@ class AliPayMain
 	 */
 	public function setOrderShowUrl ($orderShowUrl)
 	{
-		$this->showUrl = $orderShowUrl;
+		$this->showUrl = urlencode($orderShowUrl);
 	}
 
 	/**
@@ -43,7 +43,7 @@ class AliPayMain
 	 */
 	public function setOrderContent ($orderContent)
 	{
-		$this->orderContent = $orderContent;
+		$this->orderContent = urlencode($orderContent);
 	}
 
 	/**
@@ -51,7 +51,7 @@ class AliPayMain
 	 */
 	public function setOrderPrice ($orderPrice)
 	{
-		$this->orderPrice = $orderPrice;
+		$this->orderPrice = urlencode($orderPrice);
 	}
 
 	/**
@@ -59,7 +59,7 @@ class AliPayMain
 	 */
 	public function setOrderName ($orderName)
 	{
-		$this->orderName = $orderName;
+		$this->orderName = urlencode($orderName);
 	}
 
 	/**
@@ -67,7 +67,7 @@ class AliPayMain
 	 */
 	public function setOrderNO ($orderId)
 	{
-		$this->orderId = $orderId;
+		$this->orderId = urlencode($orderId);
 	}
 
 
