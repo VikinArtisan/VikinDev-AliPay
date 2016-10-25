@@ -12,6 +12,7 @@ return [
 
     //支付宝的公钥
     'public_key'    => '',
+
     //签名方式
     'sign_type'     => strtoupper('RSA'),
 
