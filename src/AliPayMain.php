@@ -138,7 +138,7 @@ class AliPayMain
 	 */
 	public function wapRequest ()
 	{
-		$AliPaySubmit = App::make('Vikin\AliPay\AliPaySubmit');
+		$AliPaySubmit = App::make('Vikin\AliPay\Resource\AliPaySubmit');
 
 		$mobileRes = App::call([$AliPaySubmit, 'buildRequest'], ['paraTemp' => $this->parameter_wap()]);
 
@@ -152,7 +152,7 @@ class AliPayMain
 	 */
 	public function webRequest ()
 	{
-		$AliPaySubmit = App::make('Vikin\AliPay\AliPaySubmit');
+		$AliPaySubmit = App::make('Vikin\AliPay\Resource\AliPaySubmit');
 
 		$mobileRes = App::call([$AliPaySubmit, 'buildRequest'], ['paraTemp' => $this->parameter_pc()]);
 

@@ -1,5 +1,5 @@
 <?php
-namespace Vikin\AliPay;
+namespace Vikin\AliPay\Resource;
 
 
 class AliPaySubmit
