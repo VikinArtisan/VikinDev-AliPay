@@ -94,7 +94,10 @@ class AliPaySubmit
 
         $sHtml = "https://mapi.alipay.com/gateway.do?_input_charset=utf-8";
         while (list ( $key, $val ) = each($para)) {
-            $sHtml .= "&" . $key . "=" . $val;
+
+            if($key == '_input_charset') continue;
+
+            $sHtml .= "&" . $key . "=" . urlencode($val);
         }
 
         return $sHtml;
