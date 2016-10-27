@@ -1,7 +1,7 @@
 #AliPay in laravel5.3
 
-[![License](https://poser.pugx.org/vikin/alidayu/license)](https://packagist.org/packages/vikin/alidayu)
-[![Total Downloads](https://poser.pugx.org/vikin/alidayu/downloads)](https://packagist.org/packages/vikin/alidayu)
+[![License](https://poser.pugx.org/vikin/alipay/license)](https://packagist.org/packages/vikin/alipay)
+[![Total Downloads](https://poser.pugx.org/vikin/alipay/downloads)](https://packagist.org/packages/vikin/alipay)
 
 >Laravel的支付宝支付package
 
