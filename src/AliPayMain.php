@@ -117,18 +117,18 @@ class AliPayMain
 	public function parameter_wap ()
 	{
 		return [
-			"service"        => config("VikinDevWebAliPay.service"),
+			"service"        => config("VikinDevWapAliPay.service"),
 			"partner"        => config("VikinDevAliPay.partner"),
 			"seller_id"      => config("VikinDevAliPay.seller_id"),
 			"payment_type"   => config("VikinDevAliPay.payment_type"),
-			"notify_url"     => config("VikinDevWebAliPay.notify_url"),
-			"return_url"     => config("VikinDevWebAliPay.return_url"),
+			"notify_url"     => config("VikinDevWapAliPay.notify_url"),
+			"return_url"     => config("VikinDevWapAliPay.return_url"),
 			"out_trade_no"   => $this->orderId,
 			"subject"        => $this->orderName,
 			"total_fee"      => $this->orderPrice,
 			"body"           => $this->orderContent,
 			"show_url"       => $this->showUrl,
-			"_input_charset" => trim(strtolower(config("alipayMobile.input_charset")))
+			"_input_charset" => trim(strtolower(config("VikinDevAliPay.input_charset")))
 		];
 	}
 
