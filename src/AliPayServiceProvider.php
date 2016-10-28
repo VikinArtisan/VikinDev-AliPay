@@ -14,9 +14,9 @@ class AliPayServiceProvider extends ServiceProvider
     public function boot ()
     {
         $this->publishes([
-			__DIR__ . '/config/VikinDevAliPay.php.php'    => config_path('VikinDevAliPay.php'),
-			__DIR__ . '/config/VikinDevWebAliPay.php.php' => config_path('VikinDevWebAliPay.php'),
-			__DIR__ . '/config/VikinDevWapAliPay.php.php' => config_path('VikinDevWapAliPay.php'),
+			__DIR__ . '/config/VikinDevAliPay.php'    => config_path('VikinDevAliPay.php'),
+			__DIR__ . '/config/VikinDevWebAliPay.php' => config_path('VikinDevWebAliPay.php'),
+			__DIR__ . '/config/VikinDevWapAliPay.php' => config_path('VikinDevWapAliPay.php'),
         ]);
     }
 
