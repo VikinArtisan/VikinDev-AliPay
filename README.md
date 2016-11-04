@@ -15,7 +15,7 @@ composer require vikin/alipay
 或者在你的composer.json文件中添加:
 
 ```bash
-"vikin/alidayu" : "0.7"
+"vikin/alipay" : "0.7"
 ```
 然后执行下面的命令进行安装:
 
